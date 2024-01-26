@@ -14,15 +14,15 @@ hwnd = encontrar_janela_por_pid(session.ProcessId)
 anuncio_anterior = None
 while True:
     time.sleep(1)
-    anuncio_atual = anuncio_tocando(hwnd)
+    text, anuncio_atual = anuncio_tocando(hwnd)
     if anuncio_atual != anuncio_anterior:
         if anuncio_atual:
             volume = get_session_volume(session)
-            print('Anúncio tocando: '+time.strftime('%H:%M:%S'))
+            print('Anúncio tocando: ' +text+ ' / ' +time.strftime('%H:%M:%S'))
             print('Volume: '+ str(volume))
             set_session_volume(session, 0)
         else:
-            print('Anúncio não tocando: '+time.strftime('%H:%M:%S'))
+            print('Música tocando: ' +text+ ' / ' +time.strftime('%H:%M:%S'))
             print('Volume: '+ str(volume))
             set_session_volume(session, volume)
         anuncio_anterior = anuncio_atual

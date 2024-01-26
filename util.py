@@ -41,5 +41,5 @@ def encontrar_janela_por_pid(pid: int) -> int:
 
 def anuncio_tocando(hwnd: int) -> bool:
     text = win32gui.GetWindowText(hwnd)
-    return AD_TEXT == text or NOT_AD_TEXT not in text
+    return text, AD_TEXT == text or NOT_AD_TEXT not in text
 
