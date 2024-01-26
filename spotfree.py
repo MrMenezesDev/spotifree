@@ -18,10 +18,12 @@ while True:
     if anuncio_atual != anuncio_anterior:
         if anuncio_atual:
             volume = get_session_volume(session)
-            print('Anúncio tocando')
+            print('Anúncio não tocando: '+time.strftime('%H:%M:%S'))
+            print('Volume: '+ str(volume))
             set_session_volume(session, 0)
         else:
-            print('Anúncio não tocando')
+            print('Anúncio não tocando: '+time.strftime('%H:%M:%S'))
+            print('Volume: '+ str(volume))
             set_session_volume(session, volume)
         anuncio_anterior = anuncio_atual
 

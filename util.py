@@ -28,7 +28,7 @@ def encontrar_janela_por_pid(pid: int) -> int:
         nonlocal res
         if not win32gui.IsWindowVisible(hwnd):
             return True
-        ctid, cpid = win32process.GetWindowThreadProcessId(hwnd)
+        _, cpid = win32process.GetWindowThreadProcessId(hwnd)
         if cpid == pid:
             res = hwnd
             return False
@@ -36,7 +36,7 @@ def encontrar_janela_por_pid(pid: int) -> int:
     try:
         win32gui.EnumWindows(callback, None)
     except Exception as e:
-        print(e)
+        pass
     return res
 
 def anuncio_tocando(hwnd: int) -> bool:
