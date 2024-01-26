@@ -1,8 +1,8 @@
 # Spotifree
 
-O Spotifree é uma ferramenta criada para diminuir o volume do dispositivo quando o aplicativo do spotify inicia uma propaganda.
+O Spotifree é uma ferramenta criada para diminuir o volume do aplicativo quando o spotify inicia uma propaganda.
 
-Feramenta feita em python utilizando wingui e PYQT4 
+Feramenta feita em python utilizando wingui e pycaw 
 
 Suporte somente para Windowns
 

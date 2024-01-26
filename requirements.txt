@@ -1,3 +1,2 @@
-PyAutoGUI==0.9.53
-PyQt5==5.15.7
-pywin32==305
+pywin32==306
+pycaw==20230407
